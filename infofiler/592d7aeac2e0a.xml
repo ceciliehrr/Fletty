@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mets:mets xmlns:mets="http://www.loc.gov/METS/" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.loc.gov/METS/ http://schema.arkivverket.no/METS/info.xsd" PROFILE="http://xml.ra.se/METS/RA_METS_eARD.xml" LABEL="test44" TYPE="SIP" ID="ID02c4e042-2e23-11e6-ab5e-080027102db8" OBJID="UUID:c786380a-2e22-11e6-b0f0-080027102db8">
+    <mets:metsHdr CREATEDATE="2016-06-09T11:17:38+02:00" RECORDSTATUS="NEW">
+        <mets:agent TYPE="ORGANIZATION" ROLE="ARCHIVIST">
+            <mets:name>test4</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="ARCHIVIST">
+            <mets:name>HR Employed</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="ARCHIVIST">
+            <mets:name>5.0.34</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="ARCHIVIST">
+            <mets:name>Noark 5</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="ORGANIZATION" ROLE="CREATOR">
+            <mets:name>Government X, Dep Y</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="ORGANIZATION" ROLE="OTHER" OTHERROLE="PRODUCER">
+            <mets:name>Government X, Archival Dep</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="INDIVIDUAL" ROLE="OTHER" OTHERROLE="PRODUCER">
+            <mets:name>Gene Simmons</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="OTHER" OTHERTYPE="SOFTWARE" ROLE="OTHER" OTHERROLE="PRODUCER">
+            <mets:name>Government X system type</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="ORGANIZATION" ROLE="OTHER" OTHERROLE="SUBMITTER">
+            <mets:name>Government X, Service Dep</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="INDIVIDUAL" ROLE="OTHER" OTHERROLE="SUBMITTER">
+            <mets:name>Lita Ford</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="ORGANIZATION" ROLE="IPOWNER">
+            <mets:name>Government X, Legal Dep</mets:name>
+        </mets:agent>
+        <mets:agent TYPE="ORGANIZATION" ROLE="PRESERVATION">
+            <mets:name>National Archives of X</mets:name>
+        </mets:agent>
+        <mets:altRecordID TYPE="SUBMISSIONAGREEMENT">RA 13-2011/5329; 2012-04-12</mets:altRecordID>
+        <mets:altRecordID TYPE="STARTDATE">2012-01-01</mets:altRecordID>
+        <mets:altRecordID TYPE="ENDDATE">2012-12-30</mets:altRecordID>
+        <mets:metsDocumentID>info.xml</mets:metsDocumentID>
+    </mets:metsHdr>
+    <mets:fileSec>
+        <mets:fileGrp ID="fgrp001" USE="FILES">
+            <mets:file MIMETYPE="application/x-tar" CHECKSUMTYPE="SHA-256" CREATED="2016-06-09T11:17:38+02:00" CHECKSUM="f1dfde2e63cb936874a64d56b57642f72ca39555a90e34344dfdd17408dcb2b7" USE="Datafile" ID="ID02c4c99a-2e23-11e6-ab5e-080027102db8" SIZE="747520">
+                <mets:FLocat xlink:href="file:c786380a-2e22-11e6-b0f0-080027102db8.tar" LOCTYPE="URL" xlink:type="simple"/>
+            </mets:file>
+        </mets:fileGrp>
+    </mets:fileSec>
+    <mets:structMap>
+        <mets:div LABEL="Package">
+            <mets:div LABEL="Content Description"/>
+            <mets:div LABEL="Datafiles">
+                <mets:fptr FILEID="ID02c4c99a-2e23-11e6-ab5e-080027102db8"/>
+            </mets:div>
+        </mets:div>
+    </mets:structMap>
+</mets:mets>
