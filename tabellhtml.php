@@ -4,6 +4,9 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Mobilvennlig -->
   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
   
@@ -28,18 +31,28 @@ function checkDelete(){
 
 <body>
 <?php include "navbar.php"; ?>
+
+
+
 <div class="container-fluid"><!-- container-fluid gjør at all innholde bruker hele bredden av siden -->
+
 <div class="jumbotron">
   <h1>Deponeringer</h1> 
   <p>
 </p> 
+
   </div>
 
 
 
 <br>
 
- <?php include "sokboksen.php"; ?>
+
+  
+  <!--Start på sortere-->
+  <?php include "sokboksen.php"; ?>
+  <!--Slutt på sortere-->
+<br>
 
 <!-- Start på tabell-->			
   <table class="table table-hover">
@@ -66,8 +79,8 @@ include "../../koble_til_database.php" ;
  sluttDato, saksNR, mottattDATO,forventetAnkomst, system, ansvarlig, sistendret FROM uttrekk ORDER BY status ASC";
   $resultat = $db->query($sql);
   $antall = $resultat->num_rows;
-  echo "Antall deponeringer: " . $antall . "<br /><br />";
-  
+      echo "Antall slettede deponeringer: " . $antall . "<br /><br />";
+	  
 	for ($i = 0; $i<$antall; $i++) {
 		$rad = $resultat->fetch_assoc();
 		$id = $rad['id'];
@@ -118,15 +131,17 @@ echo "<tr>";
 	echo"<td>";
 
 	echo "<form id='button' method='post' action='detaljer.php'>
-			<input name='id' type='hidden'value='$id'/>
-			<button type='submit' value='info' name='info' class='btn btn-info btn-xs' style='margin-bottom: 5px; margin-right: 3px'; >INFO</button>";
+		<input name='id' type='hidden'value='$id'/>
+		<button type='submit' value='info name='info' class='btn btn-info btn-xs' style='margin-bottom: 5px'; ><em class='fa fa-info' style='margin-right:5px;'></em>INFO</button>";
+
 	echo "</form>";
 
 	echo"<form  id='button' method='post' action='endre_rad.php'>
-			<input name='id' type='hidden' value='$id'/>
-			<button type='submit' value='Endre' name='endre' class='btn btn-primary btn-xs' style='margin-bottom: 5px; margin-right: 3px';>ENDRE</button>
-			<button onclick='return checkDelete()' type='submit' value='slett' name='slett' class='btn btn-danger btn-xs' style='margin-bottom: 5px; margin-right: 3px'; >SLETT</button>
-		</form></td>";
+<input name='id' type='hidden' value='$id'/>
+<button type='submit' value='Endre' name='endre' class='btn btn-primary btn-xs' style='margin-bottom: 5px'; ><em class='fa fa-pencil' style='margin-right:5px;'></em>ENDRE</button>
+<button onclick='return checkDelete()' type='submit' value='slett' name='slett' class='btn btn-danger btn-xs' style='margin-bottom: 5px'; ><em class='fa fa-trash' style='margin-right:5px;'></em>SLETT</button>
+</form></td>";
+	
 	echo "</tr>";
 
 
