@@ -48,7 +48,7 @@ if ($feil)
 */
 //Endrer dato til riktig datoformat: $forventetAnkomst = date('Y-m-d',strtotime($_POST['forventet']));
 
-session_start();
+
 $sql = "UPDATE uttrekk SET
 			status ='" . $_POST['status'] . "',
 			skjermet ='" . $_POST['skjermet'] . "',
@@ -75,6 +75,9 @@ $sql.= " WHERE id ='" . $_POST['id'] . "'";
 
 echo "<div class='alert alert-success'alert-dismissible' role='alert'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>$sql
 </div>";
+
+
+
 $registrer = $db->query($sql);
 
 
