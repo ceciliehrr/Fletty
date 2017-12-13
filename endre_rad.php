@@ -23,7 +23,7 @@ include "../../koble_til_database.php" ;
 		$sql = "DELETE FROM uttrekk WHERE id ='" . $_POST['id'] . "'";
 		$resultat = $db->query($sql);
 		echo "<div class='alert alert-warning'alert-dismissible' role='alert'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a><h2> Raden ble slettet! </h2></div>";
-		if (mysqli_error())
+		if (mysqli_error($db))
 		 {
 		echo "<div class='alert alert-danger'alert-dismissible' role='alert'><a href='#' class='close' data-dismiss='alert' aria-label='close'>&times;</a>Error description: " . mysqli_error($db) . "</div>";
 		 }
@@ -35,7 +35,7 @@ include "../../koble_til_database.php" ;
 		 $sql = "SELECT * FROM uttrekk WHERE id = '" . $_POST['id'] . "'";
 		 $resultat = $db->query($sql);
 		 $rad = $resultat->fetch_assoc(); //får bare en rad
-		 if (mysqli_error())
+		 if (mysqli_error($db))
 		 {
 		 echo "Error description: " . mysqli_error($db);
 		 }
